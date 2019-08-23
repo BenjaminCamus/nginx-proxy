@@ -1,10 +1,10 @@
-docker-start: docker-stop
+start: stop
 	docker-compose -f docker-compose.yml up -d
 
-docker-watch:
+watch:
 	docker-compose -f docker-compose.yml up
 
-docker-stop:
+stop:
 	docker-compose -f docker-compose.yml stop
 
 bash:
