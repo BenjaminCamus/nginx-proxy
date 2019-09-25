@@ -31,7 +31,7 @@ services:
       - nginx-proxy
 networks:
   nginx-proxy: # Name of our shared network that containers will use
-    name: ngninx-proxy-network
+    name: nginx-proxy-network
 volumes: # Names of volumes that out containers will share. Those will persist on docker's host machine.
   nginx-conf:
   nginx-vhost:
