@@ -2,8 +2,8 @@ version: '3.5' # Version of the Docker Compose file format
 services:
   nginx-proxy:
     image: jwilder/nginx-proxy:alpine
-#    restart: always # Always restart container
     container_name: nginx-proxy
+    restart: always # Always restart container
     ports:
       - 80:80 # Port mappings in format host:container
       - 443:443
@@ -19,8 +19,8 @@ services:
       - certs:/etc/nginx/certs:ro
   letsencrypt-nginx-proxy-companion:
     image: jrcs/letsencrypt-nginx-proxy-companion
-#    restart: always
     container_name: letsencrypt-nginx-proxy-companion
+    restart: always # Always restart container
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - nginx-conf:/etc/nginx/conf.d
